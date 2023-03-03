@@ -1,0 +1,38 @@
+//<<Interface>> Controle
+package Exercicio1;
+
+public interface Controle {
+    public void andar();
+    public void virar();
+    public void falar();
+}
+
+//Classe Robo
+package Exercicio1;
+
+public class Robo implements Controle{
+    public void andar(){
+        System.out.println("Andando...");
+    }
+    public void virar(){
+        System.out.println("Virando...");
+    }
+    public void falar(){
+        System.out.println("Falando...");
+    }
+}
+
+//Classe UsaRobo
+package Exercicio1;
+
+public class UsaRobo {
+    public static void main(String[] args) {
+       
+        Robo walle = new Robo();
+
+        walle.andar();
+        walle.virar();
+        walle.falar();
+
+    }
+}
