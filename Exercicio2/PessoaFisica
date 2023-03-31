@@ -1,0 +1,9 @@
+public class PessoaFisica extends Pessoa {
+    
+    private String rg;
+
+    public Double calcularIR(){
+        return System.out.println("Calculando");
+    }
+    
+}
