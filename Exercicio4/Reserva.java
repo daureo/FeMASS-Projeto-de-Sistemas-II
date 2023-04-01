@@ -29,14 +29,8 @@ public class Reserva implements EstadoHospedagem{
         return this.tipoQuarto;
     }
 
-   public void reservar(){
-
-   } 
-   public void checkIn(){
-
-   } 
-   public void checkOut(){
-
-   } 
+    public void reservar(){
+        
+    }
 
 }

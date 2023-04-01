@@ -27,13 +27,8 @@ public class Andamento implements EstadoHospedagem{
         return this.quarto;
     }
 
-    public void reservar(){
-
-    } 
+    
     public void checkIn(){
- 
-    } 
-    public void checkOut(){
  
     } 
 }
