@@ -9,18 +9,30 @@ public class Mensalidade {
     private Double juros_mens;
     private Double valor_pago;
     private Boolean quit_mens;
+    private Socio socio;
+
+    public Mensalidade(Socio socio, Date dataVencimento, Double valorMensalidade){
+      this.socio = socio;
+      this.data_mens = dataVencimento;
+      this.valor_mens = valorMensalidade;
+    }
 
     public String consMens() {
         return "Dados Mensalidade";
     }
 
     public Double calcJuros(){
-        return 2.33;
+      if((new Date()).compareTo(this.data_mens)>0)  
+        return ((this.valor_mens * this.juros_mens));
+        else
+        return 0.0;
     }
     
     public int quitarMens(){
-        this.quit_mens = !this.quit_mens;
-        return 1;
+        if (this.quit_mens = !this.quit_mens)
+          return 1;
+        else
+          return 0;
     }
 
     public Date getData_mens() {
@@ -56,5 +68,12 @@ public class Mensalidade {
     }
     public void setValor_pago(Double value) {
       this.valor_pago = value;
+    }
+
+    public Socio getSocio() {
+      return this.socio;
+    }
+    public void setSocio(Socio value) {
+      this.socio = value;
     }
 }

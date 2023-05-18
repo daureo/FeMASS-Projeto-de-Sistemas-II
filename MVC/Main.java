@@ -1,10 +1,15 @@
+import java.util.Date;
+
 import controller.CategoriaController;
 import controller.DependenteController;
+import controller.MensalidadeController;
 import controller.SocioController;
 import model.Categoria;
 import model.Dependente;
+import model.Mensalidade;
 import model.Socio;
 import view.DependenteView;
+import view.MensalidadeView;
 import view.SocioView;
 
 public class Main {
@@ -26,6 +31,13 @@ public class Main {
         DependenteView novoDepView = new DependenteView(novoDepController);
 
         novoDepView.mostrarDependente();
+
+        Mensalidade novaMensalidade = new Mensalidade(novoSocio, new Date(), 145.00 );
+        MensalidadeController novaMensalidadeController = new MensalidadeController(novaMensalidade);
+        MensalidadeView novaMensalidadeView = new MensalidadeView(novaMensalidadeController);
+
+        novaMensalidadeView.mostrarMensalidade();
+        
 
 
 
