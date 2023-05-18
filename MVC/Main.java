@@ -1,7 +1,10 @@
 import controller.CategoriaController;
+import controller.DependenteController;
 import controller.SocioController;
 import model.Categoria;
+import model.Dependente;
 import model.Socio;
+import view.DependenteView;
 import view.SocioView;
 
 public class Main {
@@ -17,6 +20,14 @@ public class Main {
         SocioView novoSocioView = new SocioView(novoSocioController);
 
         novoSocioView.mostrarSocio(new Long(1));
+
+        Dependente novoDependente = new Dependente(new Long(1), "Thomas", "Filho", "na", novoSocio);
+        DependenteController novoDepController = new DependenteController(novoDependente);
+        DependenteView novoDepView = new DependenteView(novoDepController);
+
+        novoDepView.mostrarDependente();
+
+
 
     }
 }

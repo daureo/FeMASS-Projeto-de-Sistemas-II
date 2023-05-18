@@ -7,6 +7,14 @@ public class Dependente {
     private String email_dep;
     private Socio socio;
 
+    public Dependente(Long cartao, String nome, String parentesco, String email, Socio socio){
+      this.cartao_dep = cartao;
+      this.nom_dep = nome;
+      this.parentesco = parentesco;
+      this.email_dep = email;
+      this.socio = socio;
+    }
+
     public Long regDep(){
         //Logica de registro de um novo dependente
         return this.cartao_dep;

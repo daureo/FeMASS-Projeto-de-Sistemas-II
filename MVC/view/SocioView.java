@@ -3,7 +3,7 @@ package view;
 import controller.SocioController;
 
 public class SocioView {
-    public SocioController controller;
+    private SocioController controller;
 
     public SocioView(SocioController controller){
         this.controller = controller;
