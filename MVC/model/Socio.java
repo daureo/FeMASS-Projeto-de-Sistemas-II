@@ -8,7 +8,14 @@ public class Socio {
     private String email_socio;
     private Categoria categoria;
 
-    
+    public Socio(Long cartao, String nome, String endereco, String telefone, String email, Categoria categoria){
+      this.cartao_socio = cartao;
+      this.nome_socio = nome;
+      this.end_socio = endereco;
+      this.tel_socio = telefone;
+      this.email_socio = email;
+      this.categoria = categoria;
+    }
     public Long regSocio(){
         //Logica de registro de um novo socio
         return this.cartao_socio;
